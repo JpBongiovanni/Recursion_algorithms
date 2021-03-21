@@ -23,9 +23,6 @@ function rFact(num){
 function floodFill(canvas2d, startX, startY, newColor){
     console.log(canvas2d[startX][startY]);
     var startPoint = canvas2d[startX][startY]
-    if(startPoint == 3){
-        
-    }
 }
 
 //1. basic recursive function
