@@ -2,6 +2,7 @@
 // 1. Write a recursive function that given a number returns the sum of integers from 1 to that number.
 // Example: rSigma(5) = 15 (1+2+3+4+5); rSigma(2.5) = 3 (1+2); rSigma(-1) = 0.
 function rSigma(num){
+    num = Math.trunc(num)
     if(num > 0) {
         return rSigma(num-1) + num;
     }
@@ -25,6 +26,20 @@ function floodFill(canvas2d, startX, startY, newColor){
     var startPoint = canvas2d[startX][startY]
 }
 
+//4. Recursive fibonacci sequence
+function rFib(num){
+    num = Math.trunc(num)
+    if(num === 3){
+        return 2;
+    } else if (num ===2){
+        return 1;
+    } else if (num === 1){
+        return 0;
+    } else {
+        return rFib(num-1) + rFib(num-2)
+    }
+}
+
 //1. basic recursive function
 console.log(rSigma(5)) 
 
@@ -32,9 +47,12 @@ console.log(rSigma(5))
 console.log(rFact(6.5)) 
 
 //3. Floodfill
-console.log(floodFill(
-    [[3,2,3,4,3],
-     [2,3,3,4,0],
-     [7,3,3,5,3],
-     [6,5,3,4,1],
-     [1,2,3,3,3]], 2, 2, 1))
+// console.log(floodFill(
+//     [[3,2,3,4,3],
+//      [2,3,3,4,0],
+//      [7,3,3,5,3],
+//      [6,5,3,4,1],
+//      [1,2,3,3,3]], 2, 2, 1))
+
+//4. Recursive Fibonacci
+console.log(rFib(7))
