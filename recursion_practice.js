@@ -40,6 +40,41 @@ function rFib(num){
     }
 }
 
+//5. Recursive Tribonacci sequence
+function rTrib(num){
+    Math.trunc()
+    if (num === 3){
+        return 1;
+    } else if (num === 2){
+        return 1;
+    } else if (num === 1){
+        return 0;
+    } else {
+        return rFib(num-1) + rFib(num-2) + rFib(num-3)
+    }
+}
+
+//6. Ackermann's function
+function ackermann(num1, num2){
+    return num1 === 0 ? num2 + 1 : ackermann(num1-1, num2 === 0 ? 1 : ackermann(num1, num2 -1));
+}
+
+//7. Recursive Binary Search
+function rBinarySearch(arr, value){
+    var mid = Math.floor(arr.length/2);
+    if(arr[mid] == value) {
+        return true;
+    }
+    else if(value < arr[mid] && arr.length > 1) {
+        return rBinarySearch(arr.slice(0, mid), value);
+    }
+    else if(value > arr[mid] && arr.length > 1){
+        return rBinarySearch(arr.slice(mid, arr.length), value)
+    } else {
+        return false
+    }
+}
+
 //1. basic recursive function
 console.log(rSigma(5)) 
 
@@ -56,3 +91,13 @@ console.log(rFact(6.5))
 
 //4. Recursive Fibonacci
 console.log(rFib(7))
+
+//5. Recursive Tribonacci
+console.log(rTrib(4))
+
+//6. Recursive Ackermann function - may not work
+console.log(ackermann(1, 2));
+
+//7. Recursive Binary Search
+console.log(rBinarySearch([1, 3, 5, 6], 4));
+console.log(rBinarySearch([4, 5, 6, 8, 12], 5));
