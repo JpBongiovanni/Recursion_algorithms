@@ -87,18 +87,26 @@ function rGCF(num1, num2){
         return num1
     }
     if (num1 > num2){
-        return rGCF(num1 - num2, num2);
+        if ((num1/num2) % 1 === 0){
+            return num2
+        } else {
+            return rGCF(num1-num2, num2);
+        }
     }
     if (num1 < num2){
-        return rGCF(num1, num2-num1);
+        if((num1/num2) % 1 === 0) {
+            return num2;
+        } else {
+            return rGCF(num1, num2-num1);
+        }
     }
 }
 
 //1. basic recursive function
-console.log(rSigma(5)) 
+// console.log(rSigma(5)) 
 
 //2. Recursive Factoral
-console.log(rFact(6.5)) 
+// console.log(rFact(6.5)) 
 
 //3. Floodfill
 // console.log(floodFill(
@@ -109,19 +117,20 @@ console.log(rFact(6.5))
 //      [1,2,3,3,3]], 2, 2, 1))
 
 //4. Recursive Fibonacci
-console.log(rFib(7))
+// console.log(rFib(6))
 
 //5. Recursive Tribonacci
-console.log(rTrib(4))
+// console.log(rTrib(4))
 
 //6. Recursive Ackermann function - may not work
-console.log(ackermann(1, 2));
+// console.log(ackermann(1, 2));
 
 //7. Recursive Binary Search
-console.log(rBinarySearch([1, 3, 5, 6], 4));
-console.log(rBinarySearch([4, 5, 6, 8, 12], 5));
+// console.log(rBinarySearch([1, 3, 5, 6], 4));
+// console.log(rBinarySearch([4, 5, 6, 8, 12], 5));
 
 //8. Greatest Common Factor
-console.log(rGCF(3, 7));   
-console.log(rGCF(18, 27)); 
-console.log(rGCF(49, 14));
+// console.log(rGCF(3, 7));   
+// console.log(rGCF(18, 27)); 
+console.log(rGCF(123456, 987654));
+console.log(rGCF(27, 12));
