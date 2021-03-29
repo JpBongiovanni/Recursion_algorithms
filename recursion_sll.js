@@ -20,13 +20,14 @@ class SLL{
         return str
     }
 
-    recListLen(){
+    recListLen(sll1){
         var runner = this.head
         var count = 0
         while (runner != null){
             count = count + 1
             runner = runner.next
         }
+        this.display()
         return count
     }
 }
