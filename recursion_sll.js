@@ -20,7 +20,7 @@ class SLL{
         return str
     }
     //non recursive solved but need recursive
-    recListLen(sll1){
+    listLen(sll1){
         var runner = this.head
         var count = 0
         while (runner != null){
@@ -30,6 +30,22 @@ class SLL{
         this.display()
         return count
     }
+
+    recListLen(){
+        var count = 0
+        var runner = this.head
+
+        if(runner != null){
+            count = count +1
+            runner = runner.next
+            this.recListLen()
+        }
+
+        this.display
+        return count
+
+    }
+
 }
 
 var myNode1 = new Node(32)
