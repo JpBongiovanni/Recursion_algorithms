@@ -31,20 +31,14 @@ class SLL{
         return count
     }
 
-    recListLen(){
+    recListLen(sll1){
         var count = 0
         var runner = this.head
-
-        if(runner != null){
-            count = count +1
-            runner = runner.next
-            this.recListLen()
-        }
-
-        this.display
+        runner = runner.next
+        count = count + 1
+        this.recListLen()
         return count
-
-    }
+        }
 
 }
 
