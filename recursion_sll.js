@@ -40,6 +40,15 @@ class SLL{
         return count
         }
 
+        recListLen(sll1){
+            var count = 0
+            var runner = this.head
+            runner = runner.next
+            count = count + 1
+            this.recListLen()
+            return count
+            }
+
 }
 
 var myNode1 = new Node(32)
@@ -60,6 +69,8 @@ myNode2.next = myNode3
 myNode3.next = myNode4
 myNode4.next = myNode5
 myNode5.next = myNode6
+
+
 
 //sll2
 
